@@ -1,0 +1,38 @@
+* {
+    -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+body {
+  background: #a2ffe3;
+margin: 0;
+  text-align: left;
+}
+
+h1 {
+  font-family: "Roboto Slab", Symbol, serif;
+  background: #a2beff;
+  margin: 0;
+  padding: 1%;
+}
+
+p {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  background: white;
+  padding: 1em;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+
+div {
+margin: auto;
+}
+
+#container2 {
+  margin-top: 2%;
+}
+
+footer {padding: 5px;}

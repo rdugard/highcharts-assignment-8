@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ADHD in Children</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
+    <script src="js/highcharts.js"></script>
+  <link rel="stylesheet" href="styles/highchart-styles.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+
+<h1>ADHD in Children</h1>
+<p>Attention Deficit Hiperactive Disorder (ADHD), also known as Attention Deficit Disorder (ADD) is a disorder that is characterized by inattentiveness, hyperactivity and impulsiveness. The symptoms usually appear before a child is seven years old and is diagnosed by a doctor. There is no difinitive test for ADHD, but studies show that the percentage of children diagnosed with ADHD has grown recently.</p>
+<div id="container" style="width: 60%; height:40%;"></div>
+<script>
+$(function(){
+  $("#container").highcharts({
+    title: {
+      text: "ADHD in Children by Gender",
+      x: -20 //center
+    },
+    subtitle: {
+      text: "Source: Center for Disease and Control",
+      x: -20
+    },
+    xAxis: {
+      categories: ["1997", "2000", "2003", "2006", "2009", "2012"]
+    },
+    yAxis: {
+      title: {
+        text: "Percentage of Diagnosed ADHD"
+      },
+      plotLines: [{
+        value: 0,
+        width: 1,
+        color: "#808080"
+      }]
+    },
+    legend: {
+      layout: "vertical",
+      align: "right",
+      verticalAlign: "middle",
+      borderWidth: 0
+    },
+    series: [{
+      name: "male",
+      data: [9.6, 10.8, 10.7, 12.0, 13.1, 14.1]
+    }, {
+      name: "female",
+      data: [3.2, 4.2, 4.4, 4.9, 5.9, 6.2]
+    }]
+  });
+});
+</script>
+
+
+<p>This information was found by <a href="http://www.cdc.gov/nchs/hus/child.htm#healthstatus">CDC</a>. "Health conditions among children under age 18, by selected characteristics: United States, average annual, selected years 1997-1999 through 2012-2014.""</p>
+
+
+
+<div id="container2" style="width: 60%; height:40%;"></div>
+<script>
+$(function (){
+  $("#container2").highcharts({
+    chart: {
+      type: "column"
+    },
+    title: {
+      text: "ADHD in Children by Race or Origin"
+    },
+    subtitle: {
+      text: "Source: Center for Disease and Control"
+    },
+    xAxis: {
+      categories: ["1997", "2012"],
+      crosshair: true
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: "Percentage of Diagnosed ADHD"
+      }
+    },
+    tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+    series: [{
+      name: "White",
+      data: [7.1, 10.7]
+    }, {
+      name: "Black or African American",
+      data: [5.0, 9.5]
+    },{
+      name: "Hispanic",
+      data: [3.6, 6.4]
+    }]
+  });
+});
+</script>
+
+<p>This information was found by <a href="http://www.cdc.gov/nchs/hus/child.htm#healthstatus">CDC</a>. "Health conditions among children under age 18, by selected characteristics: United States, average annual, selected years 1997-1999 through 2012-2014."</p>
+
+<footer>This page was created by Rachel Dugard.</footer>
+
+</body>
+</html>
